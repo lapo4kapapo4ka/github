@@ -1,0 +1,20 @@
+#will be test code here
+#!esri_ & !admin
+source_users = source.users.search('!esri_ & !admin')
+for user in source_users:
+    print(user.username + "\t:\t" + str(user.role))
+brown.rogers	:	org_user
+davis.reed	:	org_admin
+johnson.stewart	:	org_user
+jones.morris	:	org_user
+miller.cook	:	org_publisher
+moore.bell	:	org_publisher
+project_archiver	:	org_user
+smith.collins	:	org_admin
+taylor.murphy	:	org_publisher
+williams.sanchez	:	org_user
+wilson.morgan	:	org_publisher
+
+# filter out system and initial administrator accounts
+target_users = target.users.search('!esri_ & !admin & !system_publisher')
+target_users
