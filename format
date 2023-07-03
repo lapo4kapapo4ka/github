@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+
+std::vector<std::string> nouns = { "cat", "dog", "tree", "car" };
+std::vector<std::string> verbs = { "runs", "jumps", "sleeps", "eats" };
+std::vector<std::string> adjectives = { "big", "small", "red", "blue" };
+std::vector<std::string> adverbs = { "quickly", "slowly", "loudly", "quietly" };
+
+std::string getRandomWord(const std::vector<std::string>& words)
+{
+    int index = std::rand() % words.size();
+    return words[index];
+}
+
+std::string generateSentence()
+{
+    std::string noun = getRandomWord
